@@ -1,0 +1,30 @@
+Data Structure --> EndSem
+Data Type(Primitive and Non Primitive)
+Intro Data Structures :
+	Stack-Definitions and Concepts
+	Polish Expression
+	Reverse Polish
+	Recursion
+	Representation of Queue
+	Circular Queue
+	Priority Queue
+	Double Ended Queue
+Linear Data Structure:
+	Linked List --> Single Doubly,Circular
+	Stack and Queue using Linked List
+	Performance Analysis and Measurement
+	Time and Space Anaysis 
+	Asymptotic Notations
+Non Linear :
+	BST
+	GENERAL TREE TO BINARY TREE COVERSION
+	BALANCED TREE MECH --> HEIGHT , WEIGHT BALANCED
+	RED BLACK TREE
+	MULTI WAY SEARCH TREE
+	B AND B+ TREE
+	GRAPH BFS ADN DFS
+HASHING :
+	SYMBOL TABLE
+	HASHING FUNCTIONS
+	COLLISION RESOLUTION TECHNIQUE 
+	
