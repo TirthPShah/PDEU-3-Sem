@@ -435,8 +435,9 @@ int main() {
     recursivePostOrder(root);
     printf("\n");
 
-    printf("PostOrder: ");
-    iterativePostOrder(root);
+    printf("Breadth First Traversal: ");
+
+    breadthFirstTraversal(root);
     printf("\n");
 
     printf("Enter the data to search: ");
@@ -461,6 +462,10 @@ int main() {
 
     printf("PreOrder: ");
     iterativePreOrder(root);
+    printf("\n");
+
+    printf("PostOrder: ");
+    recursivePostOrder(root);
     printf("\n");
 
     return 0;
