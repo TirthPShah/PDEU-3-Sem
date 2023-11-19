@@ -116,18 +116,24 @@ int main() {
     
     struct Node* root = NULL;
 
-    root = insert(root, 20);
-    root = insert(root, 10);
-    root = insert(root, 30);
-    root = insert(root, 5);
-    root = insert(root, 16);
-    root = insert(root, 14);
-    root = insert(root, 17);
-    root = insert(root, 13);
+    printf("- - - - Inserting Data, Give -1 to stop - - - -\n");
+
+    while(1) {
+        printf("Enter Data: ");
+
+        int data;
+        scanf("%d", &data);
+
+        if(data == -1) {
+            break;
+        }
+
+        root = insert(root, data);
+    }
 
     inOrder(root);
     printf("\n");
 
     return 0;
-    
+
 }
