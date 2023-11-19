@@ -2,75 +2,73 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+#define MAX_SIZE 100
+
+// Structure for a tree node
 struct Node {
-    
     int data;
     struct Node* left;
     struct Node* right;
 };
 
-struct QueueNode {
-    struct Node* data;
-    struct QueueNode* next;
-};
-
 // Structure for a queue
 struct Queue {
-    struct QueueNode* front;
-    struct QueueNode* rear;
+    struct Node* array[MAX_SIZE];
+    int front, rear;
 };
 
-
 struct Node* createNode(int data) {
-    
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
     newNode->left = NULL;
     newNode->right = NULL;
-    
-    return newNode;
-}
-
-struct QueueNode* createQueueNode(struct Node* data) {
-    struct QueueNode* newNode = (struct QueueNode*)malloc(sizeof(struct QueueNode));
-    newNode->data = data;
-    newNode->next = NULL;
     return newNode;
 }
 
 // Function to create an empty queue
 struct Queue* createQueue() {
     struct Queue* queue = (struct Queue*)malloc(sizeof(struct Queue));
-    queue->front = queue->rear = NULL;
+    queue->front = queue->rear = -1;
     return queue;
 }
 
 // Function to check if the queue is empty
 int isEmpty(struct Queue* queue) {
-    return (queue->front == NULL);
+    return (queue->front == -1);
+}
+
+// Function to check if the queue is full
+int isFull(struct Queue* queue) {
+    return (queue->rear == MAX_SIZE - 1);
 }
 
 // Function to enqueue a tree node
 void enqueue(struct Queue* queue, struct Node* data) {
-    struct QueueNode* newNode = createQueueNode(data);
-    if (isEmpty(queue)) {
-        queue->front = queue->rear = newNode;
+    if (!isFull(queue)) {
+        if (isEmpty(queue)) {
+            queue->front = 0;
+        }
+        queue->rear++;
+        queue->array[queue->rear] = data;
     } else {
-        queue->rear->next = newNode;
-        queue->rear = newNode;
+        printf("Queue Overflow\n");
     }
 }
 
 // Function to dequeue a tree node
 struct Node* dequeue(struct Queue* queue) {
-    if (isEmpty(queue)) {
-        return NULL;
-    } else {
-        struct QueueNode* temp = queue->front;
-        struct Node* data = temp->data;
-        queue->front = temp->next;
-        free(temp);
+    if (!isEmpty(queue)) {
+        struct Node* data = queue->array[queue->front];
+        if (queue->front == queue->rear) {
+            // Reset the queue
+            queue->front = queue->rear = -1;
+        } else {
+            queue->front++;
+        }
         return data;
+    } else {
+        printf("Queue Underflow\n");
+        return NULL;
     }
 }
 
