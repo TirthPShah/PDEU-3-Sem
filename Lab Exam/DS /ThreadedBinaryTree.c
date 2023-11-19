@@ -51,29 +51,31 @@ struct Node* insert(struct Node* root, int ikey) {
     tmp -> info = ikey;
     tmp -> leftThread = true;
     tmp -> rightThread = true;
-    //tmp -> left = NULL;       //My addition not from gfg but seems to work
-    //tmp -> right = NULL;
 
     if(par == NULL) {
+
         root = tmp;
         tmp -> left = NULL;
         tmp -> right = NULL;
+        
     }
 
     else if(ikey < (par -> info)) {
 
-        tmp -> left = par -> left;    // According to me if we initialise tmp -> left and tmp -> right then also we wont have any problem if we miss this step also
+        tmp -> left = par -> left;
         tmp -> right = par;
         par -> leftThread = false;
         par -> left = tmp;
+
     }
 
     else {
 
         tmp -> left = par;
-        tmp -> right = par -> right;     // According to me if we initialise tmp -> left and tmp -> right then also we wont have any problem if we miss this step also
+        tmp -> right = par -> right;
         par -> rightThread = false;
         par -> right = tmp;
+
     }
 
     return root;
