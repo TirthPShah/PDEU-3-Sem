@@ -157,8 +157,64 @@
       <a name="label" val="D0"/>
       <a name="labelfont" val="Times New Roman plain 16"/>
     </comp>
-    <comp lib="8" loc="(762,1194)" name="Text">
-      <a name="text" val="Selector: \n Tirth"/>
+    <comp lib="8" loc="(1036,520)" name="Text">
+      <a name="font" val="Times New Roman bold 21"/>
+      <a name="text" val="Universal Shift Register"/>
+    </comp>
+    <comp lib="8" loc="(1082,1424)" name="Text">
+      <a name="font" val="Times New Roman plain 16"/>
+      <a name="text" val="For value of ShiftLeft = 0, on 1 pass: 0100, 2 pass: 1000, 3 and further pass: 0000"/>
+    </comp>
+    <comp lib="8" loc="(1084,1486)" name="Text">
+      <a name="font" val="Times New Roman plain 16"/>
+      <a name="text" val="When selected it loads the value of I0, I1, I2, I3 in O0, O1, O2 and O3 respectively"/>
+    </comp>
+    <comp lib="8" loc="(1086,1338)" name="Text">
+      <a name="font" val="Times New Roman plain 16"/>
+      <a name="text" val="For value of ShiftRight = 1, on 1 pass: 1101, 2 pass: 1110, 3 and further pass: 1111"/>
+    </comp>
+    <comp lib="8" loc="(1100,1371)" name="Text">
+      <a name="font" val="Times New Roman plain 16"/>
+      <a name="text" val="When selected it left shifts the value of the registers by adding the bit in ShiftLeft in right"/>
+    </comp>
+    <comp lib="8" loc="(1103,1261)" name="Text">
+      <a name="font" val="Times New Roman plain 16"/>
+      <a name="text" val="When selected it right shifts the value of the registers by adding the bit in ShiftRight in left"/>
+    </comp>
+    <comp lib="8" loc="(1123,1452)" name="Text">
+      <a name="font" val="Times New Roman plain 16"/>
+      <a name="text" val="For value of ShiftLeft = 1, on 1 pass: 0101, 2 pass: 1011, 3 pass: 0111, 4 and further pass: 1111"/>
+    </comp>
+    <comp lib="8" loc="(1130,1231)" name="Text">
+      <a name="font" val="Times New Roman plain 16"/>
+      <a name="text" val="When selected it keeps the value of output pins O0, O1, etc. in there previous state and do not change them"/>
+    </comp>
+    <comp lib="8" loc="(1131,1315)" name="Text">
+      <a name="font" val="Times New Roman plain 16"/>
+      <a name="text" val="For value of ShiftRight = 0, on 1 pass: 0101, 2 pass: 0010, 3 pass: 0001, 4 and further pass: 0000"/>
+    </comp>
+    <comp lib="8" loc="(729,1194)" name="Text">
+      <a name="text" val="Selector:"/>
+    </comp>
+    <comp lib="8" loc="(734,1232)" name="Text">
+      <a name="text" val="0 0 Memory"/>
+    </comp>
+    <comp lib="8" loc="(735,1376)" name="Text">
+      <a name="text" val="1 0 Shift Left"/>
+    </comp>
+    <comp lib="8" loc="(743,1487)" name="Text">
+      <a name="text" val="1 1 Parallel Load"/>
+    </comp>
+    <comp lib="8" loc="(744,1261)" name="Text">
+      <a name="text" val="0 1 Shift Right"/>
+    </comp>
+    <comp lib="8" loc="(980,1399)" name="Text">
+      <a name="font" val="Times New Roman plain 16"/>
+      <a name="text" val="That is if the value O3, O2, O1, O0 are 1010 then,"/>
+    </comp>
+    <comp lib="8" loc="(984,1289)" name="Text">
+      <a name="font" val="Times New Roman plain 16"/>
+      <a name="text" val="That is if the value O3, O2, O1, O0 are 1010 then,"/>
     </comp>
     <wire from="(1060,1040)" to="(1060,1120)"/>
     <wire from="(1060,1040)" to="(1100,1040)"/>
