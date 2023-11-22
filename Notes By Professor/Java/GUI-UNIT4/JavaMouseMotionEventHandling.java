@@ -3,12 +3,12 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
 
-class JavaMouseMotionEventHandlingApp extends JFrame implements MouseMotionListener{
+public class JavaMouseMotionEventHandling extends JFrame implements MouseMotionListener{
 		
 	JLabel lblStatus = new JLabel("");
 	int x = 200, y = 200;
 		
-	public JavaMouseMotionEventHandlingApp(String title){
+	public JavaMouseMotionEventHandling(String title){
 		super(title);
 		setSize(400, 400);
 		
@@ -43,6 +43,6 @@ class JavaMouseMotionEventHandlingApp extends JFrame implements MouseMotionListe
 	}
 
 	public static void main(String[] args){
-		JavaMouseMotionEventHandlingApp sw1 = new JavaMouseMotionEventHandlingApp("Greeting-App!!!");
+		JavaMouseMotionEventHandling sw1 = new JavaMouseMotionEventHandling("Greeting-App!!!");
 	}
 }
