@@ -134,7 +134,7 @@ public class Java4_4 extends JFrame implements ActionListener, KeyListener{
     }
 
     public void keyPressed(KeyEvent k) {
-
+        keyHandler(k);
     }
 
     public void keyReleased(KeyEvent k) {
@@ -143,7 +143,12 @@ public class Java4_4 extends JFrame implements ActionListener, KeyListener{
 
     public void keyTyped(KeyEvent k) {
 
+    }
+
+    public void keyHandler(KeyEvent k) {
+
         String command = String.valueOf(k.getKeyChar());
+        int keyCode = k.getKeyCode();
 
         if (command.equals("0") || command.equals("1") || command.equals("2") || command.equals("3") || command.equals("4") || command.equals("5") || command.equals("6") || command.equals("7") || command.equals("8") || command.equals("9")) {
 
@@ -166,7 +171,7 @@ public class Java4_4 extends JFrame implements ActionListener, KeyListener{
 
         } 
         
-        else if (command.equals("C")) {
+        else if (command.equals("C") || command.equals("c") || keyCode == KeyEvent.VK_ESCAPE) {
             
             display.setText("");
             firstNumber = 0;
@@ -174,7 +179,7 @@ public class Java4_4 extends JFrame implements ActionListener, KeyListener{
 
         } 
         
-        else if (command.equals("=")) {
+        else if (command.equals("=") || keyCode == KeyEvent.VK_ENTER) {
 
             secondNumber = Double.parseDouble(display.getText());
 
